@@ -1,0 +1,157 @@
+@layer reset, init, design;
+
+@import url(./normalize.css) layer(reset);
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap') layer(init);
+
+@layer init {
+    :root {
+        color-scheme: light dark;
+        --header-bg-color: light-dark(#3B3E40, #3B3E40);
+        --header-text-color: light-dark(#fff, #fff);
+        --primary-color: light-dark(#66D4D4, #4a9797);
+        --secondary-color: light-dark(#FFF, #4b4b4b);
+        --text-color: light-dark(#181818, #eeeded);
+        --bg-color: light-dark(#ffffff, #1f1e1e);
+
+    }
+
+    html {
+        font-family: 'Open sans', sans-serif;
+        font-size: 100%;
+        color: var(--text-color);
+    }
+}
+
+@layer design {
+    main {
+        padding: 1rem;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    body {
+        background-color: var(--bg-color);
+    }
+
+    .header {
+        background-image: url(../images/header-2560w.webp);
+        background-size: cover;
+        background-position: top left;
+        background-color: var(--header-bg-color);
+        color: var(--header-text-color);
+        line-height: 1.5;
+        padding: 1em;
+    }
+
+    .header_nav {
+        text-align: center;
+    }
+
+    .header_img{
+        padding-top: 20px;
+        transform: scale(2);
+    }
+
+    .header_intro {
+        margin-top: 10vh;
+        margin-left: 143px;
+
+        width: 763.99px;
+        height: 142px;
+        flex-shrink: 0;
+        padding-bottom: 250px ;
+
+    }
+
+    .button {
+        text-decoration: none;
+        display: inline-block;
+        border-radius: .5rem;
+        padding: 0.75em 2em;
+    }
+
+    .button--light {
+        background-color: var(--secondary-color);
+        color: var(--text-color);
+    }
+
+    .button--primary {
+        background-color: var(--primary-color);
+        color: var(--text-color-light);
+    }
+
+    .img-fluid {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .img-block {
+        display: block;
+        margin: 0;
+    }
+
+    .img-block_caption {
+        text-align: center;
+        margin-top: 0.5em;
+        font-size: 1rem;
+    }
+
+    .paramas {
+        padding: 1em;
+    }
+
+    h1 {
+        font-size: 4rem;
+        font-weight: extra-bold;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+        font-weight: bold;
+    }
+
+    .heading--h3 {
+        font-size: 1.125em;
+    }
+
+    .heading {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+    }
+
+    .info-block {
+        margin: 1em 0;
+        padding: 1rem;
+        border: 3px solid var(--primary-color);
+    }
+
+    .info-block__title {
+        margin-bottom: 1.5em;
+    }
+
+    .feature-block {
+        margin: 2rem 0;
+    }
+
+    .feature-list__item {
+        margin: 1rem 0;
+    }
+
+    .feature-list__item::marker {
+        color: var(--primary-color);
+        font-size: 1.5rem;
+    }   
+
+    .card {
+        vertical-align: top;
+        display: inline-block;
+        margin: 0 3.75rem 0 0;
+        width: 17.5em;
+    }
+
+    .card__img {
+        width: 17.5em;
+    }
+}
